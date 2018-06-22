@@ -41,7 +41,7 @@ function init() {
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: url(<%= asset_path 'loc.png' %>)
+                icon: "<%= asset_path('loc.png') %>"
             });
 
         });
