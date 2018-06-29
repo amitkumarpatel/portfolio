@@ -1,0 +1,85 @@
+<div id="fh5co-consult" style="min-height: 949px;">
+    <div class="video fh5co-video" style="background-image: url(<%= asset_path 'cover_bg_1.jpg' %>;)">
+      <div class="overlay"></div>
+    </div>
+    <div class="choose animate-box">
+      <h2>Contact</h2>
+      <%= form_for @contact, remote: true do |f| %>  
+      <div id="success-message"></div>  
+      <!-- <form action="#"> -->
+        <div class="row form-group">
+          <div class="col-md-7">
+            <!-- <input type="text" id="fname" class="form-control" placeholder="Your firstname"> -->
+            <%= f.text_field :first_name, class: "form-control", placeholder: "Your firstname", required: true %>  
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-md-6">
+            <!-- <input type="text" id="lname" class="form-control" placeholder="Your lastname"> -->
+            <%= f.text_field :last_name, class: "form-control", placeholder: "Your lastname", required: true %>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-md-12">
+            <!-- <input type="text" id="email" class="form-control" placeholder="Your email address"> -->
+            <%= f.text_field :email, class: "form-control", placeholder: "Your email address", required: true %>  
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-md-12">
+            <!-- <input type="text" id="subject" class="form-control" placeholder="Your subject of this message"> -->
+            <%= f.text_field :subject, class: "form-control", placeholder: "Your subject of this message", required: true %>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-md-12">
+            <!-- <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea> -->
+            <%= f.text_area :comment, class: "form-control", cols:"30", rows: "10", placeholder: "Say something about me", required: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <!-- <input type="submit" value="Send Message" class="btn btn-primary"> -->
+          <%= f.submit "Send Message", class: "btn btn-primary", id: 'send_message_submit_button' %>  
+        </div>
+
+      <!-- </form> -->
+      <% end %>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    $(document).ready( function() {
+  //     $("#send_message_submit_button").click( function(){
+  //       $(".error").remove();
+  //       if($.trim($("#contact_first_name").val())==''){
+  //         $("#contact_first_name").after('<span class="error">Please Add Yout First Name.</span>');
+  //       }
+
+  // //      if($.trim($("#static_page_authenticate").val())==''){
+  // //        $("#static_page_authenticate").after('<span class="error">Please Add authentication value.</span>');
+  // //      }
+  //       if($.trim($("#contact_last_name").val())==''){
+  //         $("#contact_last_name").after('<span class="error">Please Add Your Last Name.</span>');
+  //       }
+  //       if($.trim($("#contact_email").val())==''){
+  //         $("#contact_email").after('<span class="error">Please Add Your E-mail.</span>');
+  //       }
+  //       if($.trim($("#contact_subject").val())==''){
+  //         $("#contact_subject").after('<span class="error">Please Add Your Subject.</span>');
+  //       }
+
+  //       if($.trim($("#contact_comment").val())==''){
+  //         $("#contact_comment").after('<span class="error">Please Add Your Comment.</span>');
+  //       }
+  //       if( $(".error").length) {
+  //         return false;
+  //       } 
+  //     });  
+    });  
+    // function validateStaticPage(){
+    // }
+
+  </script>
