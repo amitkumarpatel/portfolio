@@ -350,33 +350,33 @@
       </div>
       <div class="row">
         <div class="col-md-3 text-center col-padding animate-box">
-          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-1.jpg' %>);">
+          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-1.jpg' %>);"data-toggle="modal" data-target="#project1">
             <div class="desc">
-              <h3>Project Name</h3>
+              <h3>Satori</h3>
               <span>Satori</span>
             </div>
           </a>
         </div>
         <div class="col-md-3 text-center col-padding animate-box">
-          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-2.jpg' %>);">
+          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-2.jpg' %>);"data-toggle="modal" data-target="#project2">
             <div class="desc">
-              <h3>Project Name</h3>
+              <h3>GalaxyGaming</h3>
               <span>GalaxyGaming</span>
             </div>
           </a>
         </div>
         <div class="col-md-3 text-center col-padding animate-box">
-          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-3.jpg' %>);">
+          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-3.jpg' %>);"data-toggle="modal" data-target="#project3">
             <div class="desc">
-              <h3>Project Name</h3>
+              <h3>Syncrew</h3>
               <span>Syncrew</span>
             </div>
           </a>
         </div>
         <div class="col-md-3 text-center col-padding animate-box">
-          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-4.jpg' %>);">
+          <a href="#" class="work" style="background-image: url(<%= asset_path 'portfolio-4.jpg' %>);"data-toggle="modal" data-target="#project4">
             <div class="desc">
-              <h3>Project Name</h3>
+              <h3>Nowfashion</h3>
               <span>Nowfashion</span>
             </div>
           </a>
@@ -491,3 +491,79 @@
   <%= render "contact_form" %>
 
   <div id="map" class="fh5co-map"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="project1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Satori</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Satori is a file sharing and collaboration platform. User can share as many as files with a size less than 40mb to any user inside the organization. Satori also deploys other application (Rails Engine) such as Quiz, Custom lists, Training app.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="project2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">GalaxyGaming</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Web application to maintain table Game in Casino. Admin maintains the games, jackpots, tables through this portal. This site is used locally in a single casino. So no live url is present. Made Connection from this application with electronics devices that has configured ip through LAN cables.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div><div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="project3" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Syncrew</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        SYNCrew is the best way to manage a mobile workforce using the communication tools you already own. The app is easy and quick to use so management gets the data it needs and the crew in the field doesn't waste time emailing, texting, or typing notes into their phones.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div><div class="modal fade" id="project4" tabindex="-1" role="dialog" aria-labelledby="project4" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nowfashion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Real time fashion photography magazine and Fashion Photography Streaming and Fashion Shows Live.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

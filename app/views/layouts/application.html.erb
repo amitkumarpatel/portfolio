@@ -30,7 +30,7 @@
 	  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAin_TTwsCZ8bJMbVQ1fWbmL0M-dAZW450"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -46,8 +46,8 @@
               <div class="display-t js-fullheight">
                 <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                   <div class="profile-thumb" style="background: url(<%= asset_path'user-profile.jpg'%>);"></div>
-                  <h1><span id="typed"></span></h1>
-                  <h3><span>Web Developer(Ruby on Rails) &amp; Ruby Developer</span></h3>
+                  <h1><span id="typed" class="welcome-text"></span></h1>
+                  <h3><span id="work" class="my-work">&nbsp;</span></h3>
                   <p>
                     <ul class="fh5co-social-icons">
                       <li><a href="http://www.linkedin.com/in/amitkumarpatel44
@@ -85,19 +85,39 @@
     </div>
     
 <script>
+  var elem1;
+  var elem2;
+  elem1 = $('.welcome-text');
+  elem2 = $('.my-work');
   new Typed('#typed', {
     strings: ["I'm Amit"],
     typeSpeed: 100,
-    // onComplete: function() {
-    //   var cursor = document.getElementsByClassName('typed-cursor')[0];
-
-    //   // setTimeout(function() {
-    //   //   cursor.remove();
-    //   // }, 100);
-    // }
+    onStringTyped: function() {
+      //    return elem1.siblings('.typed-cursor').remove();
+      //console.log(elem1.siblings('.typed-cursor').removeClass(''));
+      //elem1.siblings('.typed-cursor').removeClass('typed-cursor--blink')
+    },
+    onComplete: function() {
+      $("#work").text("");
+      new Typed('#work', {
+        strings: ["Web Developer(Ruby on Rails) & Ruby Developer"],
+        typeSpeed: 100,
+        contentType: 'text',
+        onStringTyped: function() {
+          return elem2.siblings('.typed-cursor').remove();
+        }
+      })
+    }
   })
 
+
 </script>
+<style>
+  .typed-cursor.typed-cursor--blink
+  {
+    animation: none !important;
+  }
+</style>
     <!-- jQuery -->
 <!--    <script src="js/jquery.min.js"></script> -->
     <!-- jQuery Easing -->
